@@ -29,29 +29,40 @@
         },
       };
     </script>
-    <style>
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-      }
-      /* Added for phone frame */
-      body {
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* --- MODIFIED CSS FOR RESPONSIVE FRAME --- */
+    body {
         background-color: #333;
+        /* Use flexbox to center the frame on the page */
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
-      }
-      .phone-frame {
-        max-width: 440px;
-        width: 100%;
-        max-height: 860px;height: 860px;
+        min-height: 100vh; /* Ensure body takes full height */
+        padding: 1rem; /* Add some space on smaller screens */
+    }
+    .phone-frame {
+        width: 100%; /* Be flexible, fill the container */
+        max-width: 400px; /* But don't get wider than our ideal size */
+        
+        height: auto; /* Let height be determined by aspect ratio */
+        /* This is the magic part: Forces the shape (400 / 860 ≈ 9 / 19.5) */
+        aspect-ratio: 9 / 19.5; 
+        
+        /* On short screens (like laptops), don't let the frame be taller than the viewport */
+        max-height: 95vh; 
+
         border-radius: 2.5rem;
         border: 8px solid #111;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        overflow: hidden; /* This is essential */
         position: relative;
-      }
-    </style>
+    }
+</style>
   </head>
   <body class="font-display">
     <div class="phone-frame">
