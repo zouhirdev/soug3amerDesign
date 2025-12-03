@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Onboarding: Record & Sell</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00e677",
+              "background-light": "#f5f8f7",
+              "background-dark": "#333",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        font-size: 24px;
+      }
+      /* Added for phone frame */
+      body {
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+      .phone-frame {
+        max-width: 400px;
+        width: 100%;
+        height: 860px;
+        border-radius: 2.5rem;
+        border: 8px solid #111;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body class="font-display">
+    <!-- Phone Frame -->
+    <div class="phone-frame">
+      <div
+        class="relative flex h-full w-full flex-col bg-background-dark overflow-x-hidden"
+      >
+        <!-- Top App Bar -->
+        <div
+          class="flex items-center bg-background-dark p-4 justify-between"
+        >
+          <div class="flex size-12 shrink-0 items-center justify-start">
+            <a href="#">
+              <span class="material-symbols-outlined text-white/80"
+                >arrow_back_ios_new</span
+              >
+            </a>
+          </div>
+          <div class="flex w-12 items-center justify-end">
+             <a href="video_feed_screen.html" class="text-primary/80 text-base font-bold leading-normal tracking-[0.015em] shrink-0">Skip</a>
+          </div>
+        </div>
+        <!-- Spacer -->
+        <div class="flex-grow flex flex-col justify-center">
+          <!-- Header Image -->
+          <div class="@container px-4">
+            <div
+              class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl min-h-80"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCETb6mJIxy3Myat0oMsDzIK5RmB5jcJUaul787tV3G_1UbG60_eP1HBa-2fr1gTPQlm6YHvXQaW9l_OImphkP-T-Ha0ZMpsPB-vER3d97lR-tlHwZkX_O2i9Ad1ABEj3AEIrSIkwKEepFvObi4GomNFETiWNF_SG_d3FVSHfIIpWRYuuwDRRFURGBTw4F2FmOdNl1JYPllUTN2nANLhijzjuIe6u656gja-zXi7o990ttALD4_OoYA3UYPsvirr3Ge1oM3CXmK3FEk");'
+            ></div>
+          </div>
+          <!-- Headline Text -->
+          <h1
+            class="text-white tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-8"
+          >
+            Record & Sell
+          </h1>
+          <!-- Body Text -->
+          <p
+            class="text-white/70 text-base font-normal leading-normal pb-3 pt-1 px-4 text-center"
+          >
+            Showcase your items with short, engaging videos. It’s the fastest
+            and most authentic way to sell.
+          </p>
+        </div>
+        <!-- Bottom Section -->
+        <div class="px-4 pb-8 pt-4">
+          <!-- Page Indicators -->
+          <div
+            class="flex w-full flex-row items-center justify-center gap-3 py-5"
+          >
+            <div class="h-2 w-2 rounded-full bg-primary/30"></div>
+            <div class="h-2 w-2 rounded-full bg-primary"></div>
+            <div class="h-2 w-2 rounded-full bg-primary/30"></div>
+          </div>
+          <!-- CTA Button -->
+           <a href="video_feed_screen.html" class="flex h-12 w-full items-center justify-center gap-2.5 rounded-xl bg-primary px-5 font-display text-base font-bold text-background-dark">Next</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

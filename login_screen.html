@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Soug Amer 2.0 - Login</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+    <style>
+      /* Added for phone frame */
+      body {
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+      .phone-frame {
+        max-width: 400px;
+        width: 100%;
+        height: 860px;
+        border-radius: 2.5rem;
+        border: 8px solid #111;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        overflow: hidden;
+        position: relative;
+        background-color: #333; /* Match app background */
+      }
+    </style>
+    <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00e677",
+            "background-dark": "#333",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: { "xl": "1.5rem" },
+        },
+      },
+    }
+    </script>
+  </head>
+<body class="font-display">
+    <div class="phone-frame">
+        <div class="relative flex h-full w-full flex-col bg-background-dark p-4">
+            <div class="flex flex-col grow justify-between">
+                
+                <!-- Top Section: Logo & Headline -->
+                <div class="flex flex-col items-center pt-24">
+                    <div class="w-24 h-24 bg-center bg-no-repeat bg-contain" style='background-image: url("logo.png");'></div>
+                    <h1 class="text-white text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6">Welcome to the Soug 3mer</h1>
+                </div>
+
+                <!-- Bottom Section: CTAs & Legal Text -->
+                <div class="w-full max-w-md mx-auto pb-4">
+                    <div class="space-y-3 px-4">
+                        <a href="video_feed_screen.html" class="flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-white text-black">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1033_3821)"><path d="M22.56 12.25C22.56 11.45 22.49 10.68 22.36 9.92H12V14.3H18.12C17.84 15.93 17.03 17.31 15.65 18.25V21.1H19.5C21.46 19.28 22.56 16.03 22.56 12.25Z" fill="#4285F4"></path><path d="M12 23C14.97 23 17.47 22.02 19.5 20.35L15.65 17.48C14.67 18.12 13.43 18.5 12 18.5C9.36 18.5 7.15 16.7 6.34 14.28H2.38V17.24C4.34 20.73 7.86 23 12 23Z" fill="#34A853"></path><path d="M6.34 14.28C6.15 13.72 6.04 13.12 6.04 12.5C6.04 11.88 6.15 11.28 6.34 10.72V7.76H2.38C1.52 9.38 1 10.88 1 12.5C1 14.12 1.52 15.62 2.38 17.24L6.34 14.28Z" fill="#FBBC05"></path><path d="M12 6.5C13.56 6.5 14.99 7.02 16.08 7.97L19.57 4.65C17.47 2.78 14.97 1.8 12 1.8C7.86 1.8 4.34 4.27 2.38 7.76L6.34 10.72C7.15 8.3 9.36 6.5 12 6.5Z" fill="#EA4335"></path></g><defs><clippath id="clip0_1033_3821"><rect fill="white" height="22" transform="translate(1 1)" width="22"></rect></clippath></defs></svg>
+                            <span class="truncate text-base font-bold">Continue with Google</span>
+                        </a>
+                        <a href="email_sign_in_screen.html" class="flex h-12 w-full items-center justify-center rounded-xl bg-primary text-background-dark text-base font-bold">
+                            <span class="truncate">Continue with Email</span>
+                        </a>
+                    </div>
+                    <p class="text-center text-sm text-[#8dceae] pt-6 px-4">
+                        New here? <a href="sign_up_screen.html" class="font-bold text-primary hover:underline">Create an account</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

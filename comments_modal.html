@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Comments</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0" rel="stylesheet"/>
+    <style>
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      body { background-color: #333; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+      .phone-frame { max-width: 400px; width: 100%; height: 860px; border-radius: 2.5rem; border: 8px solid #111; box-shadow: 0 10px 40px rgba(0,0,0,0.5); overflow: hidden; position: relative; }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "primary": "#00e677", "background-dark": "#333" },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display">
+    <div class="phone-frame">
+        <div class="relative h-full w-full bg-background-dark flex flex-col">
+            <!-- Simulated Background Video -->
+            <div class="absolute inset-0 h-full w-full bg-cover bg-center blur-sm scale-95" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAW4k4TDn32BYFChP7lGVLl-FUy8xgNlJS8CFMt9MByBcxBcrmLmy5zwir0gWTYeahkl2Qyck7cUwLPrIjOXO8deeqox3zi-U0hyhXPiqLzhGjMOECd0tfmvd2X0B2CeQoWfe5Tipi8qeTltlutr-c30XKXIVE7F2g8X61OweLGJGv_vP7zWergqJdI4eIoYG9yKlBoqNjN-mjXlIjq2V45ANZpcDd9M4J_k7ki5GhcDTb-aqjrCRPedA-sse7clXunZNpOTTbH73Rn");'></div>
+            
+            <!-- Modal Content -->
+            <div class="relative flex flex-col h-full w-full bg-background-dark/80 backdrop-blur-md mt-[30%] rounded-t-2xl">
+                <!-- Header -->
+                <div class="flex items-center justify-center p-4 border-b border-white/10 relative">
+                    <h2 class="text-base font-bold text-white">34 Comments</h2>
+                    <a href="video_feed_screen.html" class="absolute right-4 text-white">
+                        <span class="material-symbols-outlined">close</span>
+                    </a>
+                </div>
+
+                <!-- Comments List -->
+                <div class="flex-1 overflow-y-auto p-4 space-y-6">
+                    <!-- Single Comment -->
+                    <div class="flex items-start gap-3">
+                        <img class="h-10 w-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBptQHQv_21oMLXAV6aoGWKh1Bly72LIpSo_7IeKXvwRDq5xbUzvn4ahKretI47MexFlwp7XuJAO-JoXDjfOMzpHE8Ox-1YFxtC7cPoanRpE2OHkuszsugJmuWXtJtFjXjHiWN6F3Jp_WfG_G0Yfeyhq9dZzbXexxE1MfWPgddLee_ejbhO0pOfaCztCpHFG2yIvUCH-3T4E68g7oiGdYhw9N4s7V6ziZFvST96H1E7Mqv7SBFGOYlP1Avc6MVJxQd_5Rrosz1db_OW"/>
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-400">@another_user</p>
+                            <p class="text-sm text-white">This is amazing! Where did you find it?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Bar -->
+                <div class="sticky bottom-0 bg-background-dark p-4 border-t border-white/10">
+                    <div class="flex items-center gap-2 rounded-full bg-primary/10 p-2">
+                        <input class="flex-1 border-none bg-transparent text-sm text-white placeholder-gray-400 focus:ring-0" placeholder="Add a comment..." type="text"/>
+                        <button class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-background-dark">
+                            <span class="material-symbols-outlined !text-lg">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
